@@ -7,7 +7,7 @@ export default [
   {
     id: 1,
     name: "Github",
-    link: "https://www.linkedin.com/in/cedric-leung-38637029a/",
+    link: "https://github.com/cedricicic",
     src: github,
   },
   {
@@ -18,7 +18,7 @@ export default [
   },
   {
     id: 3,
-    name: "Mail",
+    name: "Contact me",
     link: "new html",
     src: mail,
   },
