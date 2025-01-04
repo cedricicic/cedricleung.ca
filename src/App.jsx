@@ -1,10 +1,12 @@
 import React from "react";
-import Header from "./component/header.jsx";
+import Header from './components/jsx/Header';
+import Icons from './components/jsx/Icons';
 
 function App() {
   return (
     <>
       <Header />
+      <Icons />
     </>
   );
 }

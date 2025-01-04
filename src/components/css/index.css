@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'LatinModernMath';
+    src: url('../../assets/fonts/latinmodern-math.woff2') format('woff2'),
+         url('../../assets/fonts/latinmodern-math.woff') format('woff'),
+         url('../../assets/fonts/latinmodern-math.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'LatinModernMath', sans-serif;
+    background-color: #D9D9D9;
+}
