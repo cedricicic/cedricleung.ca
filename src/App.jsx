@@ -1,12 +1,12 @@
 import React from "react";
 import Header from './components/jsx/Header';
-import Icons from './components/jsx/Icons';
+import Dock from './components/jsx/Dock';
 
 function App() {
   return (
     <>
       <Header />
-      <Icons />
+      <Dock />
     </>
   );
 }

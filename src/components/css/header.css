@@ -4,19 +4,29 @@ header {
     justify-content: left;
     align-items: center;
     gap: 30px;
-    height: 88vh;
+    height: 84vh;
     background-color: #D9D9D9;
-    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
     padding-left: 30px;
     padding-right: 30px;
 }
 
-header > h1 {
-    font-size: clamp(2rem, 5vw, 10vh); 
-    flex: 1; 
-    overflow-wrap: break-word; 
-    white-space: normal; 
-    margin: 0; 
+header > .avatar {
+    vertical-align: middle;
+    width: 30%;
+    border-radius: 50%;
+    background-color: #FF3E3E;
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+header > .text-container > h1 {
+    font-size: clamp(2rem, 5vw, 10vh);
+    margin: 0;
+}
+
+header > .text-container > p {
+    font-size: clamp(1.5rem, 2vw, 3vh);
+    margin: 0;
 }
 
 .avatar {
@@ -29,20 +39,24 @@ header > h1 {
 }
 
 @media (max-width: 600px) {
+
     header {
         flex-direction: column; 
         justify-content: center;
         align-items: center;
-        padding-top: 140px;
     }
 
-    .avatar {
-        width: 250px; 
+    header > .avatar {
+        width: 70% ; 
         margin-bottom: 20px; 
     }
 
-    header > h1 {
+    header > .text-container > h1 {
         font-size: 2rem; 
-        text-align: center; 
+        text-align: center !important; 
+    }
+    header > .text-container > p {
+        font-size: 1rem; 
+        text-align: center !important; 
     }
 }

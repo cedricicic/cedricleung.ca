@@ -1,7 +1,6 @@
 @font-face {
     font-family: 'LatinModernMath';
-    src: url('../../assets/fonts/latinmodern-math.woff2') format('woff2'),
-         url('../../assets/fonts/latinmodern-math.woff') format('woff'),
+    src:
          url('../../assets/fonts/latinmodern-math.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
