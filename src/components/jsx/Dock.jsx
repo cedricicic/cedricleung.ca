@@ -1,3 +1,4 @@
+import React from 'react'
 import iconsData from "../js/icons.js"
 import Icons from "./Icons.jsx"
 

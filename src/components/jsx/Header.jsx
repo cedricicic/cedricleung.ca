@@ -5,7 +5,7 @@ import { useTypingEffect } from "../js/typing";
 function Header() {
   const Intro = useTypingEffect("Hi! My name is Cedric.", 50);
   const Description = useTypingEffect(
-    "A mathematics student fron the university of Waterloo.",
+    "A mathematics student from the University of Waterloo.",
     20
   );
 
