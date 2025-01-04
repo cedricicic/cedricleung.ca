@@ -1,16 +1,12 @@
-import github from "../../assets/images/github.png"
-import photo from "../../assets/images/photos.png"
-import mail from "../../assets/images/mail.png"
-import linkedin from "../../assets/images/linkedin.png"
+import iconsData from "../js/icons.js"
+import Icons from "./Icons.jsx"
 
-function Dock(){
-    return(
-        <div className = "dock">
-            <img className = "dock-icon" src = {github} alt = "github icon"/>
-            <img className = "dock-icon" src = {photo} alt = "photo icon"/>
-            <img className = "dock-icon" src = {mail} alt = "mail icon"/>
-            <img className = "dock-icon" src = {linkedin} alt = "linkedin icon"/>
-        </div>)
+const iconElement = iconsData.map((icon) => {
+  return <Icons key={icon.id} name={icon.name} link={icon.link} src={icon.src} />;
+});
+
+function Dock() {
+  return <div className="dock">{iconElement}</div>;
 }
 
-export default Dock
+export default Dock;

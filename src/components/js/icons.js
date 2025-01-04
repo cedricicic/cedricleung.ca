@@ -1,36 +1,31 @@
+import github from "../../assets/images/github.png"
+import photo from "../../assets/images/photos.png"
+import mail from "../../assets/images/mail.png"
+import linkedin from "../../assets/images/linkedin.png"
+
 export default [
   {
     id: 1,
     name: "Github",
-    src: "https://www.linkedin.com/in/cedric-leung-38637029a/",
+    link: "https://www.linkedin.com/in/cedric-leung-38637029a/",
+    src: github,
   },
   {
     id: 2,
     name: "Photos",
-    src: "new html",
+    link: "new html",
+    src: photo,
   },
   {
     id: 3,
     name: "Mail",
-    src: "new html",
+    link: "new html",
+    src: mail,
   },
   {
     id: 4,
     name: "Linkedin",
-    src: "https://www.linkedin.com/in/cedric-leung-38637029a/",
-  },
-  {
-    id: 5,
-  },
-  {
-    id: 6,
-  },
-  {
-    id: 7,
-    color: "#A57FE9",
-    on: false,
-  },
-  {
-    id: 8,
-  },
+    link: "https://www.linkedin.com/in/cedric-leung-38637029a/",
+    src: linkedin,
+  }
 ];
