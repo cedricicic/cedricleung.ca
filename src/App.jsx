@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/jsx/Header';
 import Dock from './components/jsx/Dock';
+import Contact from "./components/jsx/Contact";
 
 function Home() {
   return (
@@ -10,10 +11,6 @@ function Home() {
       <Dock />
     </>
   );
-}
-
-function Contact() {
-  return <h2>About Page</h2>;
 }
 
 function App() {
