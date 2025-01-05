@@ -19,12 +19,12 @@ export default [
     link: "https://github.com/cedricicic",
     src: github,
   },
-  {
-    id: 3,
-    name: "Photos",
-    link: "new html",
-    src: photo,
-  },
+  // {
+  //   id: 3,
+  //   name: "Photos",
+  //   link: "photos",
+  //   src: photo,
+  // },
   {
     id: 4,
     name: "Contact me",
