@@ -4,7 +4,6 @@ import mail from "../../assets/images/mail.png";
 import linkedin from "../../assets/images/linkedin.png";
 import resume from "../../assets/images/resume.png";
 import resumePdf from "../../assets/pdf/resume.pdf"
-import { Link } from 'react-router-dom';
 
 export default [
   {
