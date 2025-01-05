@@ -28,6 +28,10 @@
     margin-bottom: 40px; 
 }
 
+input:focus {
+    outline: none;
+  }
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -52,6 +56,10 @@
     resize: none;
 }
 
+.form-textarea:focus {
+    outline: none;
+  }
+  
 .form-submit {
     background-color: #f5f5f5;
     color: #4a4a4a;
