@@ -7,7 +7,6 @@ function Icons(props) {
       className="dock-button"
       to={props.link}
       aria-label={props.name}
-      target="_blank"
     >
       <img src={props.src} alt={props.name} />
       <div className="tooltip">{props.name}</div>
