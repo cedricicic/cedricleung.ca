@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, HashRouter } from "react-router-dom";
 import Header from './components/jsx/Header';
 import Dock from './components/jsx/Dock';
 import Contact from "./components/jsx/Contact";
@@ -15,12 +15,12 @@ function Home() {
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
