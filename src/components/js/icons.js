@@ -4,6 +4,7 @@ import mail from "../../assets/images/mail.png";
 import linkedin from "../../assets/images/linkedin.png";
 import resume from "../../assets/images/resume.png";
 import resumePdf from "../../assets/pdf/resume.pdf"
+import { Link } from 'react-router-dom';
 
 export default [
   {
@@ -28,7 +29,7 @@ export default [
   {
     id: 4,
     name: "Contact me",
-    link: "new html",
+    link: "/contact",
     src: mail,
   },
   {
