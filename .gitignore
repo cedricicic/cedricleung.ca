@@ -7,7 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-src/components/js/ignore.js
 node_modules
 dist
 dist-ssr
