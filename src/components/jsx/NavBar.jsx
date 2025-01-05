@@ -59,7 +59,9 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-left">
         <div className="navbar-icon">
+          <a href="/">
           <img src={logo} alt="logo" />
+          </a>
         </div>
         <a className="navbar-current">{currentPage}</a>
         <div

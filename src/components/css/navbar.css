@@ -23,7 +23,7 @@
   padding-right: 15px;
 }
 
-.navbar-icon>img {
+.navbar-icon>a>img {
   width: 10px;
   display: block;
 }
