@@ -3,7 +3,7 @@ import photo from "../../assets/images/photos.png";
 import mail from "../../assets/images/mail.png";
 import linkedin from "../../assets/images/linkedin.png";
 import resume from "../../assets/images/resume.png";
-import resumePdf from "../../assets/pdf/resume.pdf"
+import resumePdf from "../../assets/pdf/Resume.pdf"
 
 export default [
   {
