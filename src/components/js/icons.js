@@ -1,5 +1,4 @@
 import github from "../../assets/images/github.png";
-import photo from "../../assets/images/photos.png";
 import mail from "../../assets/images/mail.png";
 import linkedin from "../../assets/images/linkedin.png";
 import resume from "../../assets/images/resume.png";
@@ -34,7 +33,7 @@ export default [
   },
   {
     id: 5,
-    name: "About",
+    name: "About me",
     link: "/about",
     src: about,
   },
