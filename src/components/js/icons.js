@@ -4,6 +4,7 @@ import mail from "../../assets/images/mail.png";
 import linkedin from "../../assets/images/linkedin.png";
 import resume from "../../assets/images/resume.png";
 import resumePdf from "../../assets/pdf/Resume.pdf"
+import about from "../../assets/images/about.png";
 
 export default [
   {
@@ -19,12 +20,12 @@ export default [
     link: "https://github.com/cedricicic",
     src: github,
   },
-  // {
-  //   id: 3,
-  //   name: "Photos",
-  //   link: "photos",
-  //   src: photo,
-  // },
+  {
+    id: 3,
+    name: "Linkedin",
+    link: "https://www.linkedin.com/in/cedric-leung-38637029a/",
+    src: linkedin,
+  },
   {
     id: 4,
     name: "Contact me",
@@ -33,8 +34,8 @@ export default [
   },
   {
     id: 5,
-    name: "Linkedin",
-    link: "https://www.linkedin.com/in/cedric-leung-38637029a/",
-    src: linkedin,
+    name: "About",
+    link: "/about",
+    src: about,
   },
 ];
