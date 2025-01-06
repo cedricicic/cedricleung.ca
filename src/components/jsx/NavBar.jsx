@@ -14,7 +14,7 @@ function Navbar() {
         setCurrentPage("Home");
         break;
       case location.endsWith("/about") || location.endsWith("/#about"):
-        setCurrentPage("About me");
+        setCurrentPage("About");
         break;
       case location.endsWith("/contact") || location.endsWith("/#contact"):
         setCurrentPage("Contact");
