@@ -11,9 +11,7 @@ function About() {
           applications using React, Node.js, and JavaScript, and I also work
           with Python and libraries like Matplotlib, Pandas, and NumPy to
           analyse and visualise data effectively. Please check out my <a className = "resume-link" href = {resume}>resume</a> for
-          a detailed overview of my skills and experience.{" "}
-          <br/>
-          <br/>
+          a detailed overview of my skills and experience.
           Beyond mathematics and coding, I’ve had the rewarding experience of
           working as a senior barista, which fueled my ongoing passion for
           specialty coffee ☕!
