@@ -5,6 +5,7 @@ import Dock from "./components/jsx/Dock";
 import Contact from "./components/jsx/Contact";
 import Navbar from "./components/jsx/NavBar";
 import About from "./components/jsx/About";
+import Articles from "./components/jsx/Articles";
 import "./components/css/loaders.css";
 
 function Home() {
@@ -31,6 +32,15 @@ function AboutPage() {
     <>
       <Navbar />
       <About />
+    </>
+  );
+}
+
+function ArticlesPage() {
+  return (
+    <>
+      <Navbar />
+      <Articles />
     </>
   );
 }
@@ -63,6 +73,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/articles" element={<ArticlesPage />} />
       </Routes>
     </>
   );

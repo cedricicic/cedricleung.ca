@@ -7,6 +7,7 @@ import './components/css/contact.css';
 import './components/css/navbar.css';
 import './components/css/loaders.css';
 import './components/css/about.css';
+import './components/css/articles.css';
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

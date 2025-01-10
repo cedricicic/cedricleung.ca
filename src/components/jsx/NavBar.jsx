@@ -19,6 +19,9 @@ function Navbar() {
       case location.endsWith("/contact") || location.endsWith("/#contact"):
         setCurrentPage("Contact");
         break;
+        case location.endsWith("/articles") || location.endsWith("/#articles"):
+          setCurrentPage("Articles");
+          break;
       default:
         setCurrentPage("");
         break;

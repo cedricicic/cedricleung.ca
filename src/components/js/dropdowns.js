@@ -13,22 +13,27 @@ export default [
   },
   {
     id: 3,
+    name: "Articles",
+    link: "/#articles",
+  },
+  {
+    id: 4,
     name: "Contact",
     link: "/#contact",
   },
   {
-    id: 4,
+    id: 5,
     name: "Resume",
     link: resumePdf,
   },
   {
-    id: 5,
+    id: 6,
     name: "Github",
     link: "https://github.com/cedricicic",
   },
 
   {
-    id: 6,
+    id: 7,
     name: "Linkedin",
     link: "https://www.linkedin.com/in/cedric-leung-38637029a/",
   },

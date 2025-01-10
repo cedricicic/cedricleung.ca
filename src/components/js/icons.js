@@ -4,6 +4,7 @@ import linkedin from "../../assets/images/linkedin.png";
 import resume from "../../assets/images/resume.png";
 import resumePdf from "../../assets/pdf/Resume.pdf"
 import about from "../../assets/images/about.png";
+import articles from "../..//assets/images/Articles-icon.png"
 
 export default [
   {
@@ -36,5 +37,11 @@ export default [
     name: "About me",
     link: "/about",
     src: about,
+  },
+  {
+    id: 6,
+    name: "Articles",
+    link: "/articles",
+    src: articles,
   },
 ];
