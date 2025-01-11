@@ -37,6 +37,11 @@ export default [
     name: "Linkedin",
     link: "https://www.linkedin.com/in/cedric-leung-38637029a/",
   },
+  {
+    id: 8,
+    name: "WW4M",
+    link: "https://waterloo-works-for-me.pages.dev/",
+  },
 ];
 
 

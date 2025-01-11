@@ -5,6 +5,8 @@ import resume from "../../assets/images/resume.png";
 import resumePdf from "../../assets/pdf/Resume.pdf"
 import about from "../../assets/images/about.png";
 import articles from "../..//assets/images/Articles-icon.png"
+import WW4M from "../..//assets/images/WW4M-icon.png"
+
 
 export default [
   {
@@ -43,5 +45,11 @@ export default [
     name: "Articles",
     link: "/articles",
     src: articles,
+  },
+  {
+    id: 7,
+    name: "WW4M",
+    link: "https://waterloo-works-for-me.pages.dev/",
+    src: WW4M,
   },
 ];
