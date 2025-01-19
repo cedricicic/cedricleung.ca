@@ -1,73 +1,62 @@
 .about-page {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding-bottom: 35px;
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 100%;
+    margin: 0;
 }
 
-.about-section {
-    margin-bottom: 20px;
+.about-container {
+    background-color: #c7c7c7;
+    border-radius: 15px;
+    padding: 80px 70px; 
+    width: 850px;
+    text-align: center;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
 }
 
 .title {
     font-size: 2.9rem;
     font-weight: 700;
-    margin-top: 20px;
+    margin-top: 10px; 
     margin-bottom: 20px;
     color: #000000;
     text-align: center;
 }
 
-.description {
-    text-indent:50px;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #131313;
-    text-align: left;
-    padding: 0 25px;
-}
-
-.awards-section {
-    margin-top: 40px;
-}
-
-.subtitle {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #131313;
-    text-align: center;
-}
-
-.awards-list {
-    list-style-type: none;
-    padding-right: 30px;
-    padding-left: 30px;
-}
-
-.awards-list li {
+.about-description {
     font-size: 1.1rem;
-    margin-bottom: 10px;
-    color: #000000;
-    background: #b1b1b1;
-    padding: 10px;
-    border-radius: 8px;
-    transition: transform 0.2s, background-color 0.3s;
-    text-align: center;
+    line-height: 1.6;
+    color: #131313;
+    text-align: justify;
+    padding: 0 20px;
 }
 
-.awards-list li:hover {
-    transform: translateY(-5px);
-}
-
-.resume-link {
+.journal-link {
     text-decoration: none;
     color: #FF3E3E;
 }
 
-.resume-link:hover {
-    text-decoration: none;
+.journal-link:hover {
     color: #fe9494;
+}
+
+@media (max-width: 500px) {
+    .about-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
 }

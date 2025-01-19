@@ -1,36 +1,37 @@
-import resume from "../../assets/pdf/Resume.pdf";
-
 function About() {
   return (
-    <div class="about-page">
-      <section class="about-section">
-        <h1 class="title">About me</h1>
-        <p class="description">
-          I’m a Mathematics + Co-op student at the University of Waterloo,
-          actively seeking 2025 summer internships. I enjoy building web
-          applications using React, Node.js, and JavaScript, and I also work
-          with Python and libraries like Matplotlib, Pandas, and NumPy to
-          analyse and visualise data effectively. Please check out my <a className = "resume-link" href = {resume}>resume</a> for
-          a detailed overview of my skills and experience.
-          Beyond mathematics and coding, I’ve had the rewarding experience of
-          working as a senior barista, which fueled my ongoing passion for
-          specialty coffee ☕!
+    <div className="about-page">
+      <div className="about-container">
+      <h1 class="title">About Me</h1>
+        <p className="about-description">
+          Ever since I was young, I’ve been captivated by concepts, complex
+          thoughts, and patterns—things I could see but often struggled to
+          articulate. Ideas have always lingered in my mind, some small, some
+          profound, all fascinating. It reminds me of what David Lynch said
+          about ideas being like fish, “beautiful and abstract,” just waiting to
+          be caught. But I didn’t just want to catch them; I wanted to preserve
+          and share their beauty.
+          <br />
+          <br />
+          That drew me to mathematics and computer science at the University of
+          Waterloo. If I couldn’t express my ideas through filmmaking or words,
+          maybe I could do it with code and equations instead. Data
+          visualization became my way of showing people exactly what I saw in my
+          head—making the abstract tangible.
+          <br />
+          <br />
+          Through this journey, I aim to inspire others to see the beauty in
+          abstract ideas and explore the connections between art, data, and
+          storytelling. If you wish to follow my journey, please click{" "}
+          <a className="journal-link" href="https://cedricleung.ca/#/journals">
+            journals
+          </a>{" "}
+          to see how I bring these ideas to life.
         </p>
-      </section>
-      <section class="awards-section">
-        <h2 class="subtitle">Awards and Achievements</h2>
-        <ul class="awards-list">
-          <li>
-            University of Waterloo President’s Scholarship of Distinction{" "}
-          </li>
-          <li>Hypatia Contest School Champion (2023) </li>
-          <li>Top 25% of contestants in the Hypatia Contest (2023) </li>
-          <li>Top 25% of contestants in the CSMC (2023)</li>
-          <li>Top 25% of contestants in the CSMC (2022)</li>
-        </ul>
-      </section>
+      </div>
     </div>
   );
 }
+
 
 export default About;

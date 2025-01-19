@@ -4,8 +4,8 @@ import linkedin from "../../assets/images/linkedin.png";
 import resume from "../../assets/images/resume.png";
 import resumePdf from "../../assets/pdf/Resume.pdf"
 import about from "../../assets/images/about.png";
-import articles from "../..//assets/images/Articles-icon.png"
 import WW4M from "../..//assets/images/WW4M-icon.png"
+import Journal from "../..//assets/images/notes.png"
 
 
 export default [
@@ -42,9 +42,9 @@ export default [
   },
   {
     id: 6,
-    name: "Articles",
-    link: "/articles",
-    src: articles,
+    name: "Journal",
+    link: "/journals",
+    src: Journal,
   },
   {
     id: 7,
@@ -52,4 +52,5 @@ export default [
     link: "https://waterloo-works-for-me.pages.dev/",
     src: WW4M,
   },
+ 
 ];

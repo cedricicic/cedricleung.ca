@@ -5,7 +5,8 @@ import Dock from "./components/jsx/Dock";
 import Contact from "./components/jsx/Contact";
 import Navbar from "./components/jsx/NavBar";
 import About from "./components/jsx/About";
-import Articles from "./components/jsx/Articles";
+import Journals from "./components/jsx/Journal-main";
+import JournalDetail from "./components/jsx/Journals"
 import "./components/css/loaders.css";
 
 function Home() {
@@ -36,11 +37,11 @@ function AboutPage() {
   );
 }
 
-function ArticlesPage() {
+function JournalPage() {
   return (
     <>
       <Navbar />
-      <Articles />
+      <Journals />
     </>
   );
 }
@@ -73,7 +74,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/articles" element={<ArticlesPage />} />
+        <Route path="/journals" element={<JournalPage />} />
+        <Route path="/journals/:journalId" element={<JournalDetail />} />
       </Routes>
     </>
   );

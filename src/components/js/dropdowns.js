@@ -13,32 +13,27 @@ export default [
   },
   {
     id: 3,
-    name: "Articles",
-    link: "/#articles",
-  },
-  {
-    id: 4,
     name: "Contact",
     link: "/#contact",
   },
   {
-    id: 5,
+    id: 4,
     name: "Resume",
     link: resumePdf,
   },
   {
-    id: 6,
+    id: 5,
     name: "Github",
     link: "https://github.com/cedricicic",
   },
 
   {
-    id: 7,
+    id: 6,
     name: "Linkedin",
     link: "https://www.linkedin.com/in/cedric-leung-38637029a/",
   },
   {
-    id: 8,
+    id: 7,
     name: "WW4M",
     link: "https://waterloo-works-for-me.pages.dev/",
   },
