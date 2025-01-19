@@ -5,7 +5,7 @@ import resume from "../../assets/images/resume.png";
 import resumePdf from "../../assets/pdf/Resume.pdf"
 import about from "../../assets/images/about.png";
 import WW4M from "../../assets/images/WW4M-icon.png"
-import Journal from "../../assets/images/notes.png"
+import Journal from "../../assets/images/Notes.png"
 
 
 export default [
