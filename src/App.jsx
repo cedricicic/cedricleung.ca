@@ -46,6 +46,15 @@ function JournalPage() {
   );
 }
 
+function JournalFinal(){
+  return(
+    <>
+          <Navbar />
+          <JournalDetail />
+    </>
+  )
+}
+
 function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
@@ -75,7 +84,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/journals" element={<JournalPage />} />
-        <Route path="/journals/:journalId" element={<JournalDetail />} />
+        <Route path="/journals/:journalId" element={<JournalFinal />} />
       </Routes>
     </>
   );

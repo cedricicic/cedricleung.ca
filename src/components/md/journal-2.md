@@ -1,7 +1,8 @@
 ---
-title: "WIP"
-image: "src/assets/images/ellie2.png"
-date: "WIP"
-description: "WIP"
+title: "HELLLLLLLO"
+image: "./src/assets/images/ellie.png"
+date: "N/A"
+description: "N/A"
 ---
 
+N/A

@@ -1,0 +1,95 @@
+/* Container for centering */
+.markdown-container {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #D9D9D9;
+    color: #333;
+    display: flex;
+    justify-content: center;  /* Horizontally center content */
+    align-items: center;      /* Vertically center content */
+    min-height: 100vh;        /* Ensure it takes full viewport height */
+    padding: 20px;
+  }
+  
+  .markdown-content {
+    width: 100%;
+    max-width: 900px;         /* Max width for content */
+    background-color: #c7c7c7;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .markdown-container h1, 
+  .markdown-container h2, 
+  .markdown-container h3 {
+    color: #000000;
+  }
+  
+  .markdown-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: 10px;
+    line-height: 1;
+  }
+  
+  .markdown-container h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .markdown-container h3 {
+    font-size: 0.1rem;
+    margin-bottom: 0.5rem;
+    visibility:hidden;
+    margin:0;
+    padding:0;
+  }
+  
+  .markdown-container p {
+    margin: 1rem 0;
+  }
+  
+  .markdown-container img {
+    width: 200px;
+    border-radius: 8px;
+    margin: 1rem auto;  
+    display: block; 
+    padding-bottom:0;
+  }
+  
+  .markdown-container code {
+    font-family: 'Cascade Mono', Courier, monospace;
+    background: #f9f9f9;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    color: inherit; /* Use inherited color to preserve the default syntax highlighting */
+  }
+  
+  /* Code Blocks */
+  .markdown-container pre {
+    background: #f0f0f0;
+    padding: 1.2rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    color: inherit; /* Preserve syntax highlighting colors */
+  }
+  
+  .markdown-container pre code {
+    color: inherit; /* Prevent overriding syntax highlighting */
+    background: transparent; /* Ensure no background overrides */
+    padding: 0;
+    border-radius: 0;
+  }
+  
+  
+  .markdown-container .journal-detail {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  

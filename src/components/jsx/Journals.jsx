@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { loadJournals } from "../js/loadJournals";
+import { marked } from "marked";
+import '../css/md.css';
 
 function JournalDetail() {
   const { journalId } = useParams();
@@ -29,13 +31,19 @@ function JournalDetail() {
   if (!journal) return <div>Journal not found!</div>;
 
   return (
-    <div className="journal-detail">
-      <h1>{journal.title}</h1>
-      <img src={journal.image} alt={journal.title} />
-      <p>{journal.date}</p>
-      <div className="journal-content">{journal.content}</div>
+    <div className="markdown-container">
+      <div className="markdown-content">
+        <h1>{journal.title}</h1>
+        <img src={journal.image} alt={journal.title} />
+        <h3 className = "date">{journal.date}</h3>
+        <div
+          className="journal-content"
+          dangerouslySetInnerHTML={{ __html: marked(journal.body) }}
+        ></div>
+      </div>
     </div>
   );
+  
 }
 
 export default JournalDetail;
