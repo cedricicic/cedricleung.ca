@@ -1,6 +1,6 @@
 const n=`---
 title: "HELLLLLLLO"
-image: "./src/assets/images/ellie.png"
+image: "/images/ellie.png"
 date: "N/A"
 description: "N/A"
 ---

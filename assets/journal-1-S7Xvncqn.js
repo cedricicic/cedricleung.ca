@@ -1,6 +1,6 @@
 const e=`---
 title: "Fetching weather data from NOAA"
-image: "./src/assets/images/NOAA.svg"
+image: "/images/NOAA.svg"
 date: "01-19-2025"
 description: "Using Open Weather API to get historic summaries from NOAA with R."
 ---
