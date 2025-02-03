@@ -30,18 +30,20 @@ export default [
   //   src: linkedin,
   // },
 
+
+
   {
     id: 1,
-    name: "Journal",
-    link: "/journals",
-    src: Journal,
+    name: "WW4M",
+    link: "https://waterloo-works-for-me.pages.dev/",
+    src: WW4M,
   },
 
   {
     id: 2,
-    name: "WW4M",
-    link: "https://waterloo-works-for-me.pages.dev/",
-    src: WW4M,
+    name: "Journal",
+    link: "/journals",
+    src: Journal,
   },
 
   {
