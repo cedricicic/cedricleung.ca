@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../css/promptection.css";
-import { FaShieldAlt, FaDownload, FaCheck } from "react-icons/fa";
+import { FaDownload } from "react-icons/fa";
 import logo from "../../assets/images/promptection-icon-removebg.png";
 import shield from "../../assets/images/shield-logo.png";
 import safe from "../../assets/images/safe-logo.png";
@@ -31,7 +31,7 @@ function Promptection() {
           <h2>Protect Your Sensitive Data from AI Chatbots</h2>
           <p>
             Promptection is a Chrome extension that automatically detects and
-            redacts sensitive information before it’s sent.
+            redacts sensitive information before it’s sent. <a href="https://cedricleung.ca/#/journals/journal-2">Read more...</a>
           </p>
         </div>
 

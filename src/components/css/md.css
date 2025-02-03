@@ -1,95 +1,169 @@
-/* Container for centering */
 .markdown-container {
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #D9D9D9;
-    color: #333;
-    display: flex;
-    justify-content: center;  /* Horizontally center content */
-    align-items: center;      /* Vertically center content */
-    min-height: 100vh;        /* Ensure it takes full viewport height */
-    padding: 20px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; 
+  color: #333;
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; 
+  min-height: 100vh;      
+  padding: 40px 20px;       
+}
+
+.markdown-content {
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff; 
+  padding: 2.5rem;        
+  border-radius: 12px;    
+}
+
+.markdown-container h1,
+.markdown-container h2,
+.markdown-container h3 {
+  color: #000000;
+  font-weight: 600;        
+  margin-top: 0;       
+}
+
+.markdown-container h1 {
+  font-size: 2.75rem;      
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  border-bottom: 2px solid #e0e0e0; 
+  padding-bottom: 0.5rem;
+}
+
+.markdown-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;         
+}
+
+.markdown-container h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;      
+  visibility: visible;      
+  color: #444;           
+}
+
+.markdown-container p {
+  margin: 1.25rem 0;
+  font-size: 1.1rem;     
+  color: #444;             
+}
+
+.markdown-container img {
+  max-width: 100%;    
+  height: auto;           
+  border-radius: 8px;
+  margin: 1.5rem auto;      
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.markdown-container code {
+  font-family: 'Cascadia Mono', 'Courier New', monospace; 
+  background: #f0f0f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: #d6336c;       
+}
+
+.markdown-container pre {
+  background: #2d2d2d;      
+  padding: 1.5rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  color: #f8f8f2;           
+}
+
+.markdown-container pre code {
+  color: inherit;           
+  background: transparent; 
+  padding: 0;
+  border-radius: 0;
+}
+
+.markdown-container blockquote {
+  border-left: 4px solid #e0e0e0;
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0;
+  color: #666;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.markdown-container a {
+  color: #007bff;        
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.markdown-container a:hover {
+  text-decoration: underline;
+  color: #0056b3;        
+}
+
+/* Lists */
+.markdown-container ul,
+.markdown-container ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.markdown-container li {
+  margin: 0.5rem 0;
+  color: #444;
+}
+
+.markdown-container .journal-detail {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-link a {
+  color: #ff6347; 
+  text-decoration: none; 
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.custom-link a:hover {
+  color: #ff4500;
+}
+
+@media (max-width: 768px) {
+  .markdown-container {
+      padding: 20px 10px;   
   }
-  
+
   .markdown-content {
-    width: 100%;
-    max-width: 900px;         /* Max width for content */
-    background-color: #c7c7c7;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;   
   }
-  
-  .markdown-container h1, 
-  .markdown-container h2, 
-  .markdown-container h3 {
-    color: #000000;
-  }
-  
+
   .markdown-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    margin-top: 10px;
-    line-height: 1;
+      font-size: 2rem;     
   }
-  
+
   .markdown-container h2 {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
+      font-size: 1.75rem;   
   }
-  
+
   .markdown-container h3 {
-    font-size: 0.1rem;
-    margin-bottom: 0.5rem;
-    visibility:hidden;
-    margin:0;
-    padding:0;
+      font-size: 1.25rem;  
   }
-  
+
   .markdown-container p {
-    margin: 1rem 0;
+      font-size: 1rem;   
   }
-  
-  .markdown-container img {
-    width: 200px;
-    border-radius: 8px;
-    margin: 1rem auto;  
-    display: block; 
-    padding-bottom:0;
-  }
-  
-  .markdown-container code {
-    font-family: 'Cascade Mono', Courier, monospace;
-    background: #f9f9f9;
-    padding: 0.2rem 0.4rem;
-    border-radius: 3px;
-    color: inherit; /* Use inherited color to preserve the default syntax highlighting */
-  }
-  
-  /* Code Blocks */
-  .markdown-container pre {
-    background: #f0f0f0;
-    padding: 1.2rem;
-    border-radius: 5px;
-    overflow-x: auto;
-    color: inherit; /* Preserve syntax highlighting colors */
-  }
-  
-  .markdown-container pre code {
-    color: inherit; /* Prevent overriding syntax highlighting */
-    background: transparent; /* Ensure no background overrides */
-    padding: 0;
-    border-radius: 0;
-  }
-  
-  
-  .markdown-container .journal-detail {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+}
+
