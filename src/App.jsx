@@ -7,6 +7,7 @@ import Navbar from "./components/jsx/NavBar";
 import About from "./components/jsx/About";
 import Journals from "./components/jsx/Journal-main";
 import JournalDetail from "./components/jsx/Journals"
+import Promptection from "./components/jsx/Promptection"
 import "./components/css/loaders.css";
 
 function Home() {
@@ -36,6 +37,16 @@ function AboutPage() {
     </>
   );
 }
+
+function PromptPage() {
+  return (
+    <>
+      <Navbar />
+      <Promptection />
+    </>
+  );
+}
+
 
 function JournalPage() {
   return (
@@ -83,6 +94,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/promptection" element={<PromptPage />} />
         <Route path="/journals" element={<JournalPage />} />
         <Route path="/journals/:journalId" element={<JournalFinal />} />
       </Routes>

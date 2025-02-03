@@ -5,6 +5,7 @@ import resume from "../../assets/images/resume.png";
 import resumePdf from "../../assets/pdf/Resume.pdf"
 import about from "../../assets/images/about.png";
 import WW4M from "../../assets/images/WW4M-icon.png"
+import Prompt from "../../assets/images/promptection-icon.png"
 import Journal from "../../assets/images/Notes.png"
 
 
@@ -51,6 +52,12 @@ export default [
     name: "WW4M",
     link: "https://waterloo-works-for-me.pages.dev/",
     src: WW4M,
+  },
+  {
+    id: 8,
+    name: "Promptection",
+    link: "/promptection",
+    src: Prompt,
   },
  
 ];
