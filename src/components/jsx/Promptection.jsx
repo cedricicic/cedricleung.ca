@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import "../css/promptection.css";
 import { FaShieldAlt, FaDownload, FaCheck } from "react-icons/fa";
 import logo from "../../assets/images/promptection-icon-removebg.png";
+import shield from "../../assets/images/shield-logo.png";
+import safe from "../../assets/images/safe-logo.png";
+import check from "../../assets/images/check-logo.png";
 
 function Promptection() {
   return (
@@ -34,9 +37,9 @@ function Promptection() {
 
         <div className="video-container">
           <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+            width="500"
+            height="400"
+            src="https://www.youtube.com/embed/WZvHTAqA6hM"
             title="Demo Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -46,7 +49,7 @@ function Promptection() {
         <div className="features">
           <div className="feature-card">
             <div className="feature-icon">
-              <FaShieldAlt />
+            <img src={shield} alt="shield Logo" className="logo-img" />
             </div>
             <h3>Real-time Protection</h3>
             <p>
@@ -57,7 +60,7 @@ function Promptection() {
 
           <div className="feature-card">
             <div className="feature-icon">
-              <FaCheck />
+            <img src={check} alt="check Logo" className="logo-img" />
             </div>
             <h3>High Compatibility</h3>
             <p>
@@ -68,7 +71,7 @@ function Promptection() {
 
           <div className="feature-card">
             <div className="feature-icon">
-              <FaShieldAlt />
+            <img src={safe} alt="safe Logo" className="logo-img" />
             </div>
             <h3>Privacy-Focused Design</h3>
             <p>

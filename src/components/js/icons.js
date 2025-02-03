@@ -10,51 +10,56 @@ import Journal from "../../assets/images/Notes.png"
 
 
 export default [
+  // {
+  //   id: 1,
+  //   name: "Resume",
+  //   link: resumePdf,
+  //   src: resume,
+  // },
+
+  // {
+  //   id: 2,
+  //   name: "Github",
+  //   link: "https://github.com/cedricicic",
+  //   src: github,
+  // },
+  // {
+  //   id: 3,
+  //   name: "Linkedin",
+  //   link: "https://www.linkedin.com/in/cedric-leung-38637029a/",
+  //   src: linkedin,
+  // },
+
   {
     id: 1,
-    name: "Resume",
-    link: resumePdf,
-    src: resume,
+    name: "Journal",
+    link: "/journals",
+    src: Journal,
   },
 
   {
     id: 2,
-    name: "Github",
-    link: "https://github.com/cedricicic",
-    src: github,
+    name: "WW4M",
+    link: "https://waterloo-works-for-me.pages.dev/",
+    src: WW4M,
   },
+
   {
     id: 3,
-    name: "Linkedin",
-    link: "https://www.linkedin.com/in/cedric-leung-38637029a/",
-    src: linkedin,
-  },
-  {
-    id: 4,
     name: "Contact me",
     link: "/contact",
     src: mail,
   },
   {
-    id: 5,
+    id: 4,
     name: "About me",
     link: "/about",
     src: about,
   },
+
+
   {
-    id: 6,
-    name: "Journal",
-    link: "/journals",
-    src: Journal,
-  },
-  {
-    id: 7,
-    name: "WW4M",
-    link: "https://waterloo-works-for-me.pages.dev/",
-    src: WW4M,
-  },
-  {
-    id: 8,
+    id: 5,
     name: "Promptection",
     link: "/promptection",
     src: Prompt,
