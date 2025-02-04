@@ -6,8 +6,9 @@ import Contact from "./components/jsx/Contact";
 import Navbar from "./components/jsx/NavBar";
 import About from "./components/jsx/About";
 import Journals from "./components/jsx/Journal-main";
-import JournalDetail from "./components/jsx/Journals"
-import Promptection from "./components/jsx/Promptection"
+import JournalDetail from "./components/jsx/Journals";
+import Promptection from "./components/jsx/Promptection";
+import Game from "./components/jsx/Mini-game";
 import "./components/css/loaders.css";
 
 function Home() {
@@ -66,6 +67,16 @@ function JournalFinal(){
   )
 }
 
+
+function MiniGame(){
+  return(
+    <>
+          <Navbar />
+          <Game />
+    </>
+  )
+}
+
 function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
@@ -95,6 +106,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/promptection" element={<PromptPage />} />
+        <Route path="/minigame" element={<MiniGame />} />
         <Route path="/journals" element={<JournalPage />} />
         <Route path="/journals/:journalId" element={<JournalFinal />} />
       </Routes>

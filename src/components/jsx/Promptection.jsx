@@ -28,7 +28,7 @@ function Promptection() {
 
       <main className="main">
         <div className="hero">
-          <h2>Protect Your Sensitive Data from AI Chatbots</h2>
+          <h2>Protect Your Sensitive Data from AI Chatbots (beta test)</h2>
           <p>
             Promptection is a Chrome extension that automatically detects and
             redacts sensitive information before it’s sent. <a href="https://cedricleung.ca/#/journals/journal-2">Read more...</a>
