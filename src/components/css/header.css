@@ -11,14 +11,15 @@ header {
     padding-bottom: 20px;
 }
 
-header > .avatar {
+header> .avatar {
     vertical-align: middle;
     width: 30%;
     border-radius: 50%;
     background-color: #FF3E3E;
     min-width: 100px;
     flex-shrink: 0;
-}
+    will-change: transform;
+  }
 
 header > .avatar:hover {
     animation: shake 0.5s;

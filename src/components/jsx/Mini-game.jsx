@@ -32,14 +32,24 @@ function MiniGame() {
   }, []);
 
   return (
-    <div style={styles.container}>
-      <h1>Deku Link Saxophone Mini-Game</h1>
-      <p>Press keys A, S, D, F, G, H, J, K to play notes!</p>
-      <div style={styles.saxophone}>
-        {currentNote && (
-          <div style={styles.noteDisplay}>Playing: {currentNote.toUpperCase()}</div>
-        )}
+    <div className="mini-game-container">
+      <h1 className="game-title">Deku Link Saxophone Mini-Game</h1>
+      <p className="instructions">Press keys A, S, D, F, G, H, J, K to play notes!</p>
+      <div className="piano-keys">
+        {Object.keys(notes).map((key) => (
+          <div 
+            key={key} 
+            className={`key ${currentNote === key ? 'active' : ''}`}
+          >
+            {key.toUpperCase()}
+          </div>
+        ))}
       </div>
+      {currentNote && (
+        <div className="note-display">
+          Playing: {currentNote.toUpperCase()}
+        </div>
+      )}
     </div>
   );
 };
