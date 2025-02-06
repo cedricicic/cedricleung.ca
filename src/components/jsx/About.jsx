@@ -7,7 +7,7 @@ function About() {
           Ever since I was young, I’ve been captivated by concepts, complex
           thoughts, and patterns—things I could see but often struggled to
           articulate. Ideas have always lingered in my mind, some small, some
-          profound, all fascinating. It reminds me of what David Lynch said
+          profound. It reminds me of what David Lynch said
           about ideas being like fish, “beautiful and abstract,” just waiting to
           be caught. But I didn’t just want to catch them; I wanted to preserve
           and share their beauty.
