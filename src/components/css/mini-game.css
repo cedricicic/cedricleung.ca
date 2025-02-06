@@ -87,7 +87,6 @@
     }
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
     .piano-keys {
       flex-wrap: wrap;

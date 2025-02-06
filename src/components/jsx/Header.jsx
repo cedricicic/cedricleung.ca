@@ -4,14 +4,11 @@ import { useTypingEffect } from "../js/typing";
 
 function Header() {
   const avatarRef = useRef(null);
-  const headerRef = useRef(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
-    if (!headerRef.current || !avatarRef.current) return;
+    if (!avatarRef.current) return;
 
-    const rect = headerRef.current.getBoundingClientRect();
-    
     const avatarRect = avatarRef.current.getBoundingClientRect();
     const avatarCenterX = avatarRect.left + avatarRect.width / 2;
     const avatarCenterY = avatarRect.top + avatarRect.height / 2;
@@ -19,12 +16,26 @@ function Header() {
     const deltaX = e.clientX - avatarCenterX;
     const deltaY = e.clientY - avatarCenterY;
 
-    const maxTiltAngle = 30; 
+    const maxTiltAngle = 40; 
     const tiltX = Math.max(Math.min(deltaY / 20, maxTiltAngle), -maxTiltAngle);
     const tiltY = Math.max(Math.min(-deltaX / 20, maxTiltAngle), -maxTiltAngle);
 
     setTilt({ x: -tiltX, y: -tiltY });
   };
+
+  const handleMouseLeave = () => {
+    setTilt({ x: 0, y: 0 });
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
 
   const Intro = useTypingEffect("Hi! My name is Cedric.", 50);
   const Description = useTypingEffect(
@@ -32,25 +43,8 @@ function Header() {
     20
   );
 
-  const handleMouseLeave = () => {
-    setTilt({ x: 0, y: 0 });
-  };
-
-  useEffect(() => {
-    const currentHeader = headerRef.current;
-    if (currentHeader) {
-      currentHeader.addEventListener('mousemove', handleMouseMove);
-      currentHeader.addEventListener('mouseleave', handleMouseLeave);
-
-      return () => {
-        currentHeader.removeEventListener('mousemove', handleMouseMove);
-        currentHeader.removeEventListener('mouseleave', handleMouseLeave);
-      };
-    }
-  }, []);
-
   return (
-    <header ref={headerRef}>
+    <header>
       <img 
         ref={avatarRef}
         src={avatar} 
