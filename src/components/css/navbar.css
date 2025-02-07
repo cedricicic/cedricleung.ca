@@ -92,3 +92,29 @@
 .dropdown-menu li a:hover {
   background-color: #eae9e9;
 }
+
+@media (max-width: 400px) {
+
+.navbar-current {
+  font-family: 'SFProBold', sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+  .navbar-link {
+    font-family: 'SFPro', sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin-right: 15px; 
+    text-decoration: none;
+  }
+  .navbar-clock {
+    font-family: 'SFPro', sans-serif;
+    font-size: 12px;
+    color: #000;
+  }
+  
+}
