@@ -82,3 +82,16 @@ header > .text-container > p {
         text-align: center !important; 
     }
 }
+
+.permission-button {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #FF3E3E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 1000;
+  }

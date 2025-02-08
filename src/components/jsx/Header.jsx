@@ -22,7 +22,7 @@ function Header() {
     const tiltX = Math.max(Math.min(deltaY / 20, maxTiltAngle), -maxTiltAngle);
     const tiltY = Math.max(Math.min(-deltaX / 20, maxTiltAngle), -maxTiltAngle);
 
-    setTilt({ x: -tiltX, y: -tiltY });
+    setTilt({ x: tiltX, y: tiltY });
   };
 
   const handleMouseLeave = () => {
