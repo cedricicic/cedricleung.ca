@@ -5,9 +5,10 @@ import { useTypingEffect } from "../js/typing";
 function Header() {
   const avatarRef = useRef(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleMouseMove = (e) => {
-    if (!avatarRef.current) return;
+    if (!avatarRef.current || isMobile) return;
 
     const avatarRect = avatarRef.current.getBoundingClientRect();
     const avatarCenterX = avatarRect.left + avatarRect.width / 2;
@@ -24,18 +25,46 @@ function Header() {
   };
 
   const handleMouseLeave = () => {
-    setTilt({ x: 0, y: 0 });
+    if (!isMobile) {
+      setTilt({ x: 0, y: 0 });
+    }
+  };
+
+  const handleDeviceOrientation = (event) => {
+    if (!isMobile) return;
+
+    const maxTiltAngle = 40;
+    const tiltX = Math.max(Math.min(event.beta, maxTiltAngle), -maxTiltAngle);
+    const tiltY = Math.max(Math.min(-event.gamma, maxTiltAngle), -maxTiltAngle);
+
+    setTilt({ x: tiltX, y: tiltY });
   };
 
   useEffect(() => {
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseleave', handleMouseLeave);
+    const checkIfMobile = () => {
+      const userAgent = navigator.userAgent.toLowerCase();
+      const mobile = /iphone|ipad|ipod|android|blackberry|windows phone/g.test(userAgent);
+      setIsMobile(mobile);
+    };
+
+    checkIfMobile();
+
+    if (isMobile) {
+      window.addEventListener('deviceorientation', handleDeviceOrientation);
+    } else {
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseleave', handleMouseLeave);
+    }
 
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseleave', handleMouseLeave);
+      if (isMobile) {
+        window.removeEventListener('deviceorientation', handleDeviceOrientation);
+      } else {
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseleave', handleMouseLeave);
+      }
     };
-  }, []);
+  }, [isMobile]);
 
   const Intro = useTypingEffect("Hi! My name is Cedric.", 50);
   const Description = useTypingEffect(
