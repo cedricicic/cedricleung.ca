@@ -22,7 +22,7 @@ function Header() {
     const tiltX = Math.max(Math.min(deltaY / 20, maxTiltAngle), -maxTiltAngle);
     const tiltY = Math.max(Math.min(-deltaX / 20, maxTiltAngle), -maxTiltAngle);
 
-    setTilt({ x: tiltX, y: tiltY });
+    setTilt({ x: -tiltX, y: -tiltY });
   };
 
   const handleMouseLeave = () => {
@@ -37,8 +37,8 @@ function Header() {
     const maxTiltAngle = 40;
     const sensitivity = 1.5;
     
-    let tiltX = (event.beta - 45) * sensitivity; 
-    let tiltY = event.gamma * sensitivity;
+    let tiltX = -(event.beta - 45) * sensitivity; 
+    let tiltY = -event.gamma * sensitivity;
 
     tiltX = Math.max(Math.min(tiltX, maxTiltAngle), -maxTiltAngle);
     tiltY = Math.max(Math.min(tiltY, maxTiltAngle), -maxTiltAngle);
@@ -107,7 +107,7 @@ function Header() {
           onClick={requestOrientationPermission}
           className="permission-button"
         >
-          Enable Tilt Effect
+          Enable Tilt Effect?
         </button>
       )}
       <img 
