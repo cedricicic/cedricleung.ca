@@ -85,7 +85,7 @@ header > .text-container > p {
 
 .permission-button {
     position: fixed;
-    top: 20px;
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
