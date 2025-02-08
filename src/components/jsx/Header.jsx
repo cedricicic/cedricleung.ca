@@ -37,13 +37,13 @@ function Header() {
     const maxTiltAngle = 40;
     const sensitivity = 1.5;
     
-    let tiltX = -(event.beta - 45) * sensitivity; 
-    let tiltY = -event.gamma * sensitivity;
+    let tiltX = (event.beta - 45) * sensitivity; 
+    let tiltY = event.gamma * sensitivity;
 
     tiltX = Math.max(Math.min(tiltX, maxTiltAngle), -maxTiltAngle);
     tiltY = Math.max(Math.min(tiltY, maxTiltAngle), -maxTiltAngle);
 
-    setTilt({ x: tiltX, y: tiltY });
+    setTilt({ x: -tiltX, y: tiltY });
   };
 
   const requestOrientationPermission = async () => {
