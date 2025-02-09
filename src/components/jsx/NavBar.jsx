@@ -8,6 +8,8 @@ function Navbar() {
   const [currentPage, setCurrentPage] = useState("");
   const [isGoDropdownOpen, setIsGoDropdownOpen] = useState(false);
   const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false);
+  const [isSettingsDropdownOpen, setIsSettingsDropdownOpen] = useState(false);
+  const [cssEnabled, setCssEnabled] = useState(true);
 
   useEffect(() => {
     const location = window.location.href;
@@ -29,6 +31,17 @@ function Navbar() {
         break;
     }
   }, []);
+
+  const toggleCSS = () => {
+    const styleSheets = document.styleSheets;
+    const newState = !cssEnabled;
+
+    for (let i = 0; i < styleSheets.length; i++) {
+      styleSheets[i].disabled = !newState;
+    }
+
+    setCssEnabled(newState);
+  };
 
   const Clock = () => {
     const [time, setTime] = useState(
@@ -61,22 +74,6 @@ function Navbar() {
     return <div className="navbar-clock">{time}</div>;
   };
 
-  const DropdownMenu = ({ items, isOpen }) => (
-    <ul className={`dropdown-menu ${isOpen ? "open" : ""}`}>
-      {items.map((item) => (
-        <li key={item.id}>
-          <a
-            href={item.link}
-            target={item.link.startsWith("http") ? "_blank" : "_self"}
-            rel={item.link.startsWith("http") ? "noopener noreferrer" : undefined}
-          >
-            {item.name}
-          </a>
-        </li>
-      ))}
-    </ul>
-  );
-
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -92,7 +89,11 @@ function Navbar() {
           onMouseLeave={() => setIsGoDropdownOpen(false)}
         >
           <a className="navbar-link">Go</a>
-          <DropdownMenu items={dropdownData} isOpen={isGoDropdownOpen} />
+          <ul className={`dropdown-menu ${isGoDropdownOpen ? "open" : ""}`}>
+            {dropdownData.map((item) => (
+              <li key={item.id}><a href={item.link}>{item.name}</a></li>
+            ))}
+          </ul>
         </div>
         <div
           className="navbar-dropdown"
@@ -100,7 +101,25 @@ function Navbar() {
           onMouseLeave={() => setIsProjectsDropdownOpen(false)}
         >
           <a className="navbar-link">Projects</a>
-          <DropdownMenu items={dropdownDataProjects} isOpen={isProjectsDropdownOpen} />
+          <ul className={`dropdown-menu ${isProjectsDropdownOpen ? "open" : ""}`}>
+            {dropdownDataProjects.map((item) => (
+              <li key={item.id}><a href={item.link}>{item.name}</a></li>
+            ))}
+          </ul>
+        </div>
+        <div
+          className="navbar-dropdown"
+          onMouseEnter={() => setIsSettingsDropdownOpen(true)}
+          onMouseLeave={() => setIsSettingsDropdownOpen(false)}
+        >
+          <a className="navbar-link">Settings</a>
+          <ul className={`dropdown-menu ${isSettingsDropdownOpen ? "open" : ""}`}>
+            <li>
+              <a href="#" onClick={toggleCSS} className="navbar-link">
+                {cssEnabled ? 'Disable CSS' : 'Enable CSS'}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <Clock />

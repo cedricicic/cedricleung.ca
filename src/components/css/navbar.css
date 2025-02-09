@@ -87,6 +87,8 @@
   font-family: 'SFPro', sans-serif;
   font-size: 14px;
   color: #000;
+  white-space: nowrap; 
+  display: block; 
 }
 
 .dropdown-menu li a:hover {
