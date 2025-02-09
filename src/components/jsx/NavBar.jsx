@@ -9,7 +9,10 @@ function Navbar() {
   const [isGoDropdownOpen, setIsGoDropdownOpen] = useState(false);
   const [isProjectsDropdownOpen, setIsProjectsDropdownOpen] = useState(false);
   const [isSettingsDropdownOpen, setIsSettingsDropdownOpen] = useState(false);
-  const [cssEnabled, setCssEnabled] = useState(true);
+  const [cssEnabled, setCssEnabled] = useState(() => {
+    const stored = localStorage.getItem("cssEnabled");
+    return stored === null ? true : stored === "true";
+  });
 
   useEffect(() => {
     const location = window.location.href;
@@ -32,15 +35,17 @@ function Navbar() {
     }
   }, []);
 
-  const toggleCSS = () => {
-    const styleSheets = document.styleSheets;
+  const toggleCSS = (e) => {
+    e.preventDefault();
     const newState = !cssEnabled;
 
+    const styleSheets = document.styleSheets;
     for (let i = 0; i < styleSheets.length; i++) {
       styleSheets[i].disabled = !newState;
     }
 
     setCssEnabled(newState);
+    localStorage.setItem("cssEnabled", newState);
   };
 
   const Clock = () => {
@@ -74,6 +79,13 @@ function Navbar() {
     return <div className="navbar-clock">{time}</div>;
   };
 
+  useEffect(() => {
+    const styleSheets = document.styleSheets;
+    for (let i = 0; i < styleSheets.length; i++) {
+      styleSheets[i].disabled = !cssEnabled;
+    }
+  }, []);
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -91,7 +103,9 @@ function Navbar() {
           <a className="navbar-link">Go</a>
           <ul className={`dropdown-menu ${isGoDropdownOpen ? "open" : ""}`}>
             {dropdownData.map((item) => (
-              <li key={item.id}><a href={item.link}>{item.name}</a></li>
+              <li key={item.id}>
+                <a href={item.link}>{item.name}</a>
+              </li>
             ))}
           </ul>
         </div>
@@ -101,9 +115,13 @@ function Navbar() {
           onMouseLeave={() => setIsProjectsDropdownOpen(false)}
         >
           <a className="navbar-link">Projects</a>
-          <ul className={`dropdown-menu ${isProjectsDropdownOpen ? "open" : ""}`}>
+          <ul
+            className={`dropdown-menu ${isProjectsDropdownOpen ? "open" : ""}`}
+          >
             {dropdownDataProjects.map((item) => (
-              <li key={item.id}><a href={item.link}>{item.name}</a></li>
+              <li key={item.id}>
+                <a href={item.link}>{item.name}</a>
+              </li>
             ))}
           </ul>
         </div>
@@ -113,10 +131,12 @@ function Navbar() {
           onMouseLeave={() => setIsSettingsDropdownOpen(false)}
         >
           <a className="navbar-link">Settings</a>
-          <ul className={`dropdown-menu ${isSettingsDropdownOpen ? "open" : ""}`}>
+          <ul
+            className={`dropdown-menu ${isSettingsDropdownOpen ? "open" : ""}`}
+          >
             <li>
-              <a href="#" onClick={toggleCSS} className="navbar-link">
-                {cssEnabled ? 'Disable CSS' : 'Enable CSS'}
+              <a href="#" onClick={(e) => toggleCSS(e)} className="navbar-link">
+                {cssEnabled ? "Disable CSS" : "Enable CSS"}
               </a>
             </li>
           </ul>
