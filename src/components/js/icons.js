@@ -1,12 +1,12 @@
 import github from "../../assets/images/github.png";
-import mail from "../../assets/images/mail.png";
+import mail from "../../assets/images/mail.jpeg";
 import linkedin from "../../assets/images/linkedin.png";
 import resume from "../../assets/images/resume.png";
 import resumePdf from "../../assets/pdf/Resume.pdf"
-import about from "../../assets/images/about.png";
+import about from "../../assets/images/about.jpeg";
 import WW4M from "../../assets/images/WW4M-icon.png"
 import Prompt from "../../assets/images/promptection-icon.png"
-import Journal from "../../assets/images/Notes.png"
+import Journal from "../../assets/images/Notes.jpeg"
 
 
 export default [
