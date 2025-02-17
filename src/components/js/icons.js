@@ -35,7 +35,7 @@ export default [
   {
     id: 1,
     name: "WW4M",
-    link: "https://waterloo-works-for-me.pages.dev/",
+    link: "https://ww4m.pages.dev/",
     src: WW4M,
   },
 
