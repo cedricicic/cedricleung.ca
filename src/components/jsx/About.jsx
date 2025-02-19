@@ -2,9 +2,9 @@ function About() {
   return (
     <div className="about-page">
       <div className="about-container">
-      <h1 class="title">About Me</h1>
+      {/* <h1 class="title">About Me</h1> */}
         <p className="about-description">
-          Ever since I was young, I’ve been captivated by concepts, complex
+          {/* Ever since I was young, I’ve been captivated by concepts, complex
           thoughts, and patterns—things I could see but often struggled to
           articulate. Ideas have always lingered in my mind, some small, some
           profound. It reminds me of what David Lynch said
@@ -26,7 +26,8 @@ function About() {
           <a className="journal-link" href="https://cedricleung.ca/#/journals">
             journals
           </a>{" "}
-          to see how I bring these ideas to life.
+          to see how I bring these ideas to life. */}
+          i love math and i build projects for fun. &lt;3 
         </p>
       </div>
     </div>
