@@ -7,7 +7,7 @@ import about from "../../assets/images/about.jpeg";
 import WW4M from "../../assets/images/WW4M-icon.png"
 import Prompt from "../../assets/images/promptection-icon.png"
 import Journal from "../../assets/images/Notes.jpeg"
-import Grailed from "../../assets/images/HolyGrailed.jpg"
+import Grailed from "../../assets/images/HolyGrailed.jpeg"
 
 
 export default [
