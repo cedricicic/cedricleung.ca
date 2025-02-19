@@ -9,6 +9,11 @@ export default [
     name: "Promptection",
     link: "/#promptection",
   },
+  {
+    id: 3,
+    name: "Holy Grailed",
+    link: "https://holy-grailed-static.pages.dev/#resultspage",
+  },
 ];
 
 

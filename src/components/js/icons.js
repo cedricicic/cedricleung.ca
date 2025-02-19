@@ -7,6 +7,7 @@ import about from "../../assets/images/about.jpeg";
 import WW4M from "../../assets/images/WW4M-icon.png"
 import Prompt from "../../assets/images/promptection-icon.png"
 import Journal from "../../assets/images/Notes.jpeg"
+import Grailed from "../../assets/images/HolyGrailed.jpg"
 
 
 export default [
@@ -30,30 +31,21 @@ export default [
   //   src: linkedin,
   // },
 
-
-
   {
     id: 1,
-    name: "WW4M",
-    link: "https://ww4m.pages.dev/",
-    src: WW4M,
-  },
-
-  {
-    id: 2,
     name: "Journal",
     link: "/journals",
     src: Journal,
   },
 
   {
-    id: 3,
+    id: 2,
     name: "Contact me",
     link: "/contact",
     src: mail,
   },
   {
-    id: 4,
+    id: 3,
     name: "About me",
     link: "/about",
     src: about,
@@ -61,10 +53,22 @@ export default [
 
 
   {
-    id: 5,
+    id: 4,
     name: "Promptection",
     link: "/promptection",
     src: Prompt,
   },
- 
+
+  {
+    id: 5,
+    name: "Holy Grailed",
+    link: "https://holy-grailed-static.pages.dev/#resultspage",
+    src: Grailed,
+  },
+  {
+    id: 6,
+    name: "WW4M",
+    link: "https://ww4m.pages.dev/",
+    src: WW4M,
+  },
 ];
