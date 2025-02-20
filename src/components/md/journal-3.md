@@ -45,11 +45,9 @@ This project started as a quick weekend demo to showcase how additional seller a
 
 Check It Out:
 
+Static Website: <span class="custom-link">[https://holy-grailed-static.pages.dev](https://holy-grailed-static.pages.dev/#resultspage)</span> (View on a laptop for the best experience)
 
-Static Website: https://holy-grailed-static.pages.dev/#resultspage (View on a laptop for the best experience)
-
-
-GitHub Repo: https://github.com/cedricicic/Holy-grailed
+GitHub Repo: <span class="custom-link">[https://github.com/cedricicic/Holy-grailed](https://github.com/cedricicic/Holy-grailed)</span>
 
 Thanks for checking out my project—I’d love to hear your feedback!
 
