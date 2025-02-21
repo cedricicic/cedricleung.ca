@@ -1,26 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Icons(props) {
-  return props.link.startsWith("/") ? (
-    <Link
-      className="dock-button"
-      to={props.link}
-      aria-label={props.name}
-    >
-      <img src={props.src} alt={props.name} />
-      <div className="tooltip">{props.name}</div>
+function Icons({ name, link, src, badgeCount }) {
+  const Badge = badgeCount > 0 ? (
+    <span className="notification-badge">{badgeCount}</span>
+  ) : null;
+
+  return link.startsWith("/") ? (
+    <Link className="dock-button" to={link} aria-label={name}>
+      <img src={src} alt={name} />
+      {Badge}
+      <div className="tooltip">{name}</div>
     </Link>
   ) : (
     <a
       className="dock-button"
-      href={props.link}
+      href={link}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={props.name}
+      aria-label={name}
     >
-      <img src={props.src} alt={props.name} />
-      <div className="tooltip">{props.name}</div>
+      <img src={src} alt={name} />
+      {Badge}
+      <div className="tooltip">{name}</div>
     </a>
   );
 }

@@ -64,6 +64,7 @@ export default [
     name: "Holy Grailed",
     link: "https://holy-grailed-static.pages.dev/#resultspage",
     src: Grailed,
+    badgeCount: 1
   },
   {
     id: 6,
