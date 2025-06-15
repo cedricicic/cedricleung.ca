@@ -97,3 +97,95 @@ header > .text-container > p {
     font-weight: 900;
     font-size: 0.8rem;
   }
+.portfolio-notification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #ffffff;
+  color: #000000;
+  border-bottom: 1px solid #e0e0e0;
+  animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.notification-icon {
+  display: none;
+}
+
+.notification-text {
+  font-family: 'Favorit SSENSE Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  flex: 1;
+  text-align: center;
+}
+
+.notification-text a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+  transition: border-color 0.2s ease;
+}
+
+.notification-text a:hover {
+  border-bottom-color: transparent;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+  font-family: 'Favorit SSENSE Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.notification-close:hover {
+  opacity: 0.6;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .notification-content {
+    padding: 14px 20px;
+  }
+  
+  .notification-text {
+    font-size: 12px;
+  }
+  
+  .notification-close {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+  }
+}

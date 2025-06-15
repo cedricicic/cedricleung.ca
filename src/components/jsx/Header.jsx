@@ -7,6 +7,7 @@ function Header() {
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [isMobile, setIsMobile] = useState(false);
   const [hasPermission, setHasPermission] = useState(false);
+  const [showNotification, setShowNotification] = useState(true);
 
   const handleMouseMove = (e) => {
     if (!avatarRef.current || isMobile) return;
@@ -60,6 +61,10 @@ function Header() {
     }
   };
 
+  const closeNotification = () => {
+    setShowNotification(false);
+  };
+
   useEffect(() => {
     const checkIfMobile = () => {
       const userAgent = navigator.userAgent.toLowerCase();
@@ -101,30 +106,44 @@ function Header() {
   );
 
   return (
-    <header>
-      {isMobile && !hasPermission && (
-        <button 
-          onClick={requestOrientationPermission}
-          className="permission-button"
-        >
-          Enable Tilt Effect?
-        </button>
+    <>
+      {showNotification && (
+        <div className="portfolio-notification">
+          <div className="notification-content">
+            <span className="notification-text">
+              New portfolio available at <a href="https://cedri.cc" target="_blank" rel="noopener noreferrer">cedri.cc</a>
+            </span>
+            <button onClick={closeNotification} className="notification-close">
+              ×
+            </button>
+          </div>
+        </div>
       )}
-      <img 
-        ref={avatarRef}
-        src={avatar} 
-        alt="Avatar" 
-        className="avatar" 
-        style={{
-          transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
-          transition: 'transform 0.1s ease-out'
-        }}
-      />
-      <div className="text-container">
-        <h1 ref={Intro}></h1>
-        <p ref={Description}></p>
-      </div>
-    </header>
+      <header>
+        {isMobile && !hasPermission && (
+          <button 
+            onClick={requestOrientationPermission}
+            className="permission-button"
+          >
+            Enable Tilt Effect?
+          </button>
+        )}
+        <img 
+          ref={avatarRef}
+          src={avatar} 
+          alt="Avatar" 
+          className="avatar" 
+          style={{
+            transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
+            transition: 'transform 0.1s ease-out'
+          }}
+        />
+        <div className="text-container">
+          <h1 ref={Intro}></h1>
+          <p ref={Description}></p>
+        </div>
+      </header>
+    </>
   );
 }
 
